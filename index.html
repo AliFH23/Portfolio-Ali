@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ali Harb | Software Engineer</title>
+  <meta name="description" content="Ali Harb, software engineering student and MERN developer based in Irbid, Jordan.">
+
+  <!-- Apply saved theme before paint to avoid a flash -->
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("theme");
+        var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.dataset.theme = saved || (prefersDark ? "dark" : "light");
+      } catch (e) {
+        document.documentElement.dataset.theme = "dark";
+      }
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;600&family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="logo">Ali Harb</a>
+
+      <nav class="nav" id="nav" aria-label="Main">
+        <a href="#work">Work</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch color theme">
+          <span class="theme-toggle-icon" aria-hidden="true"></span>
+        </button>
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- Hero -->
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="hero-status"><span class="dot" aria-hidden="true"></span>Available for junior roles and internships</p>
+
+          <h1 class="hero-name" aria-label="Ali Harb">
+            <span class="line">Ali</span>
+            <span class="line">Harb</span>
+          </h1>
+
+          <p class="hero-intro">
+            Software engineering student and MERN developer in Irbid, Jordan.
+            I build web apps for real businesses, from the React interface to the API and database behind it.
+          </p>
+
+          <div class="hero-links">
+            <a href="#work" class="btn btn-primary">See my work</a>
+            <a href="assets/cv/Ali-Harb-CV.pdf" class="btn btn-ghost" download>Download CV</a>
+          </div>
+
+          <ul class="hero-social">
+            <li><a href="https://github.com/AliFH23" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/ali-harb-17527a294" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="mailto:aliharb229@gmail.com">Email</a></li>
+          </ul>
+        </div>
+
+        <div class="hero-photo">
+          <div class="hero-photo-frame">
+            <img src="assets/images/ali.jpg" alt="Portrait of Ali Harb">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Statement -->
+    <section class="statement" aria-label="Personal statement">
+      <div class="container">
+        <p class="statement-en">
+          Disability is not a barrier to ambition. It is an <em>extra drive</em> to create and excel.
+        </p>
+        <p class="statement-ar" lang="ar" dir="rtl">
+          الإعاقة ليست عائقاً أمام الطموح، بل دافع إضافي للإبداع والتفوق
+        </p>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section skills" id="skills">
+      <div class="container">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-group">
+            <h3>Languages</h3>
+            <p>C++, C#, JavaScript, HTML, CSS, SQL</p>
+          </div>
+          <div class="skill-group">
+            <h3>Frontend</h3>
+            <p>React, Vite, Material UI, Bootstrap, responsive design</p>
+          </div>
+          <div class="skill-group">
+            <h3>Backend and databases</h3>
+            <p>Node.js, Express, REST APIs, JWT authentication, MongoDB, PostgreSQL, Oracle APEX</p>
+          </div>
+          <div class="skill-group">
+            <h3>Tools</h3>
+            <p>Git, GitHub, VS Code, GitHub Pages, Render</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work -->
+    <section class="section work" id="work">
+      <div class="container">
+        <h2 class="section-title">Selected work</h2>
+
+        <article class="project" id="mawrid">
+          <div class="project-text">
+            <h3 class="project-title">Mawrid</h3>
+            <p class="project-meta">Full-stack project, 2026</p>
+            <p class="project-desc">
+              A B2B platform that pools purchase orders from small shops by product, category and region,
+              so together they reach a supplier's minimum order and get wholesale prices.
+              Separate roles for admins, suppliers and buyers.
+            </p>
+            <ul class="project-stack">
+              <li>React</li><li>Material UI</li><li>Node.js</li><li>Express</li><li>MongoDB</li><li>JWT</li>
+            </ul>
+            <div class="project-links">
+              <a href="#" target="_blank" rel="noopener">Live site</a> <!-- TODO: Render link -->
+              <a href="https://github.com/AliFH23/mawrid-backend" target="_blank" rel="noopener">Code</a>
+            </div>
+          </div>
+          <figure class="project-image">
+            <img src="assets/images/mawrid.png" alt="Mawrid dashboard showing active purchase pools" loading="lazy">
+          </figure>
+        </article>
+
+        <article class="project">
+          <div class="project-text">
+            <h3 class="project-title">SDK Graduate Yearbook</h3>
+            <p class="project-meta">
+              Built for SDK Software, 2026
+              <span class="status">In development</span> <!-- Remove this span when the backend is done -->
+            </p>
+            <p class="project-desc">
+              A yearbook website celebrating the company's graduates. The React frontend is backed by a
+              Node.js and Express API on MongoDB Atlas, with JWT login and a protected admin panel so the
+              team can add and edit graduates without touching code.
+            </p>
+            <ul class="project-stack">
+              <li>React</li><li>Vite</li><li>Node.js</li><li>Express</li><li>MongoDB Atlas</li><li>JWT</li>
+            </ul>
+            <div class="project-links">
+              <!-- Add Live site and Code links once the backend is done -->
+            </div>
+          </div>
+          <figure class="project-image">
+            <img src="assets/images/yearbook.png" alt="SDK graduate yearbook page with graduate profiles" loading="lazy">
+          </figure>
+        </article>
+
+        <article class="project">
+          <div class="project-text">
+            <h3 class="project-title">SDK Software Website</h3>
+            <p class="project-meta">Company website for SDK Software, 2026</p>
+            <p class="project-desc">
+              A company profile site presenting SDK's services, departments, accreditations and partners.
+              Fully bilingual in Arabic and English with right-to-left layout support, and a contact form
+              that sends messages straight to the company's inbox.
+            </p>
+            <ul class="project-stack">
+              <li>React</li><li>Vite</li><li>Material UI</li><li>EmailJS</li><li>GitHub Pages</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://alifh23.github.io/Ali-SDK/" target="_blank" rel="noopener">Live site</a>
+              <a href="https://github.com/AliFH23/Ali-SDK" target="_blank" rel="noopener">Code</a>
+            </div>
+          </div>
+          <figure class="project-image project-image--logo">
+            <img src="assets/images/sdk.png" alt="SDK Software website homepage" loading="lazy">
+          </figure>
+        </article>
+
+        <article class="project">
+          <div class="project-text">
+            <h3 class="project-title">GCE 2026</h3>
+            <p class="project-meta">Event website for SDK Software, 2026</p>
+            <p class="project-desc">
+              The website for GCE, SDK Software's yearly exhibition where students present their projects
+              to employers and specialists. I developed the 2026 edition: 20 student projects grouped by theme,
+              archive pages for the 2023 to 2025 editions, a live countdown to the event and a registration section.
+            </p>
+            <ul class="project-stack">
+              <li>HTML</li><li>CSS</li><li>JavaScript</li><li>GitHub Pages</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://alifh23.github.io/SDK-GCE/" target="_blank" rel="noopener">Live site</a>
+              <a href="https://github.com/AliFH23/SDK-GCE" target="_blank" rel="noopener">Code</a>
+            </div>
+          </div>
+          <figure class="project-image project-image--logo">
+            <img src="assets/images/GCE.png" alt="GCE 2026 homepage" loading="lazy">
+          </figure>
+        </article>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="section experience" id="experience">
+      <div class="container">
+        <h2 class="section-title">Experience</h2>
+
+        <div class="job">
+          <div class="job-head">
+            <h3>Web development trainee, SDK Software</h3>
+            <p class="job-date">Jul 2026 to Sep 2026, Irbid</p>
+          </div>
+          <ol class="timeline">
+            <li>
+              <span class="timeline-when">July</span>
+              <p>Worked on an existing company website using HTML, CSS and JavaScript.</p>
+            </li>
+            <li>
+              <span class="timeline-when">August</span>
+              <p>Moved to React and built frontend features for the company project.</p>
+            </li>
+            <li>
+              <span class="timeline-when">September</span>
+              <p>Built backend features with Node.js, Express and MongoDB.</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section class="section education" id="education">
+      <div class="container">
+        <h2 class="section-title">Education</h2>
+        <div class="job">
+          <div class="job-head">
+            <h3>B.Sc. in Software Engineering</h3>
+            <p class="job-date">Jordan University of Science and Technology (JUST), Irbid</p>
+            <p class="job-date">2022 to 2026</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section contact" id="contact">
+      <div class="container contact-inner">
+        <div class="contact-text">
+          <h2 class="section-title">Get in touch</h2>
+          <p>Open to internships, junior roles and freelance web projects.</p>
+          <ul class="contact-links">
+            <li><a href="mailto:aliharb229@gmail.com">aliharb229@gmail.com</a></li>
+            <li><a href="https://www.linkedin.com/in/ali-harb-17527a294" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="https://github.com/AliFH23" target="_blank" rel="noopener">GitHub</a></li>
+          </ul>
+        </div>
+
+        <!-- TODO: replace YOUR_FORM_ID after creating a form on formspree.io -->
+        <form class="contact-form" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <label>
+            Name
+            <input type="text" name="name" required autocomplete="name">
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" required autocomplete="email">
+          </label>
+          <label>
+            Message
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+          <button type="submit" class="btn btn-primary">Send message</button>
+          <p class="form-status" id="formStatus" role="status"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year">2026</span> Ali Harb</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
