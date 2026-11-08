@@ -1,0 +1,67 @@
+.statement {
+  position: relative;
+  padding-block: clamp(6rem, 14vw, 11rem);
+  overflow: hidden;
+}
+
+.statement__inner {
+  position: relative;
+}
+
+.statement__quote {
+  position: absolute;
+  top: -0.35em;
+  left: 0.6rem;
+  font-family: var(--font-display);
+  font-size: clamp(10rem, 24vw, 18rem);
+  font-weight: 800;
+  line-height: 1;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  opacity: 0.12;
+  pointer-events: none;
+  user-select: none;
+}
+
+.statement__en {
+  position: relative;
+  max-width: 20ch;
+  font-family: var(--font-display);
+  font-size: clamp(2.1rem, 5.4vw, 4.4rem);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+}
+
+.statement__word {
+  display: inline-block;
+  margin-right: 0.25em;
+}
+
+.statement__word--hl {
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.statement__ar {
+  max-width: 36ch;
+  margin-top: 2.75rem;
+  margin-left: auto;
+  padding-right: 1.25rem;
+  font-family: var(--font-ar);
+  font-size: clamp(1.25rem, 2.3vw, 1.7rem);
+  font-weight: 600;
+  line-height: 1.7;
+  color: var(--muted);
+  border-right: 3px solid var(--accent);
+}
+
+@media (max-width: 700px) {
+  .statement__ar {
+    margin-left: 0;
+  }
+}

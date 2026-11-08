@@ -1,0 +1,225 @@
+.contact__grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: clamp(2.5rem, 6vw, 5rem);
+  align-items: start;
+}
+
+/* Contact cards */
+.contact__cards {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 2.25rem;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  padding: 0.9rem 1.1rem;
+  text-align: left;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  transition: border-color 0.25s ease, transform 0.3s var(--ease), background-color 0.25s ease;
+}
+
+.contact-card:not(.contact-card--static):hover {
+  border-color: rgba(45, 212, 191, 0.45);
+  background: var(--surface-2);
+  transform: translateX(6px);
+}
+
+.contact-card__icon {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  font-size: 1.2rem;
+  color: var(--accent);
+  border-radius: 12px;
+  background: rgba(45, 212, 191, 0.1);
+  transition: transform 0.35s var(--ease);
+}
+
+.contact-card:hover .contact-card__icon {
+  transform: rotate(-8deg) scale(1.08);
+}
+
+.contact-card__icon--linkedin {
+  color: #4B9EE0;
+  background: rgba(75, 158, 224, 0.12);
+}
+
+.contact-card__text {
+  display: grid;
+  min-width: 0;
+}
+
+.contact-card__label {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.contact-card__value {
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.contact-card__action {
+  margin-left: auto;
+  display: grid;
+  place-items: center;
+  min-width: 70px;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.contact-card__copied {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+/* Form */
+.contact__form-wrap {
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(circle at 100% 0%, rgba(45, 212, 191, 0.1), transparent 55%),
+    var(--surface);
+}
+
+.contact__form {
+  display: grid;
+  gap: 1.1rem;
+}
+
+/* Floating label fields */
+.field {
+  position: relative;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  padding: 1.35rem 1rem 0.55rem;
+  font: inherit;
+  color: var(--text);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--bg-2);
+  resize: vertical;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.field textarea {
+  min-height: 150px;
+}
+
+.field label {
+  position: absolute;
+  top: 0.95rem;
+  left: 1rem;
+  font-size: 1rem;
+  color: var(--muted);
+  pointer-events: none;
+  transform-origin: left top;
+  transition: transform 0.2s var(--ease), color 0.2s ease;
+}
+
+.field input:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px rgba(45, 212, 191, 0.12);
+}
+
+.field input:focus + label,
+.field input:not(:placeholder-shown) + label,
+.field textarea:focus + label,
+.field textarea:not(:placeholder-shown) + label {
+  transform: translateY(-0.6rem) scale(0.78);
+  color: var(--accent);
+}
+
+.contact__error {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: #FCA5A5;
+}
+
+.contact__submit {
+  justify-self: start;
+}
+
+.contact__submit:disabled {
+  opacity: 0.75;
+  cursor: wait;
+  transform: none;
+}
+
+.contact__send-icon {
+  transition: transform 0.3s var(--ease);
+}
+
+.contact__submit:hover .contact__send-icon {
+  transform: translate(3px, -3px) rotate(8deg);
+}
+
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(11, 17, 32, 0.3);
+  border-top-color: var(--bg);
+  border-radius: 50%;
+  animation: spin-btn 0.7s linear infinite;
+}
+
+@keyframes spin-btn {
+  to { transform: rotate(360deg); }
+}
+
+/* Success state */
+.contact__success {
+  display: grid;
+  justify-items: center;
+  gap: 0.75rem;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.contact__success-icon {
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  font-size: 1.8rem;
+  color: var(--bg);
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  box-shadow: 0 16px 40px -14px var(--accent-glow);
+}
+
+.contact__success h3 {
+  font-size: 1.5rem;
+}
+
+.contact__success p {
+  color: var(--muted);
+  margin-bottom: 0.75rem;
+}
+
+@media (max-width: 900px) {
+  .contact__grid {
+    grid-template-columns: 1fr;
+  }
+}

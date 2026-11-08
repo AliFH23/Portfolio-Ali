@@ -1,0 +1,170 @@
+.experience__grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: clamp(2.5rem, 6vw, 5rem);
+  align-items: start;
+}
+
+/* Left column stays in view while scrolling the timeline */
+.experience__intro {
+  position: sticky;
+  top: calc(var(--header-h) + 2rem);
+}
+
+/* Role card */
+.role-card,
+.edu-card {
+  display: flex;
+  gap: 1.1rem;
+  align-items: flex-start;
+  padding: 1.5rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  transition: border-color 0.3s ease, transform 0.35s var(--ease);
+}
+
+.role-card {
+  margin-top: 2.25rem;
+}
+
+.role-card:hover,
+.edu-card:hover {
+  border-color: rgba(45, 212, 191, 0.4);
+  transform: translateY(-4px);
+}
+
+.role-card__icon,
+.edu-card__icon {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  font-size: 1.35rem;
+  color: var(--bg);
+  border-radius: 16px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  box-shadow: 0 12px 30px -12px var(--accent-glow);
+}
+
+.role-card__title,
+.edu-card__degree {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.role-card__company,
+.edu-card__school {
+  margin-top: 0.2rem;
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.role-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.2rem;
+  margin-top: 0.8rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.role-card__meta li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  padding-left: 3.5rem;
+}
+
+.timeline__list {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.timeline__item {
+  position: relative;
+}
+
+.timeline__connector {
+  position: absolute;
+  top: calc(1rem + 44px);
+  bottom: calc(-1.5rem - 1rem);
+  left: calc(-3.5rem + 21px);
+  width: 2px;
+  border-radius: 2px;
+  background: linear-gradient(to bottom, var(--step), var(--accent-2));
+  transform-origin: top;
+}
+
+.timeline__node {
+  position: absolute;
+  top: 1rem;
+  left: -3.5rem;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  font-size: 1.25rem;
+  color: var(--step);
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--surface-2);
+  box-shadow: 0 0 0 6px var(--bg);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.timeline__item:hover .timeline__node {
+  border-color: var(--step);
+  box-shadow: 0 0 0 6px var(--bg), 0 0 24px -4px var(--step);
+}
+
+.timeline__card {
+  padding: 1.25rem 1.4rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  transition: border-color 0.3s ease, transform 0.35s var(--ease);
+}
+
+.timeline__item:hover .timeline__card {
+  border-color: color-mix(in srgb, var(--step) 50%, transparent);
+  transform: translateX(6px);
+}
+
+.timeline__month {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--step);
+}
+
+.timeline__card p {
+  color: var(--muted);
+}
+
+/* Education */
+.edu-card {
+  margin-top: 2.5rem;
+  margin-left: -3.5rem;
+  background:
+    radial-gradient(circle at 100% 0%, rgba(129, 140, 248, 0.14), transparent 60%),
+    var(--surface);
+}
+
+@media (max-width: 900px) {
+  .experience__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .experience__intro {
+    position: static;
+  }
+}
