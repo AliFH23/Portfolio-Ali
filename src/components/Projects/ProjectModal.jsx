@@ -109,7 +109,7 @@ function ProjectModal({ project, onClose }) {
             {!project.live && !project.code && (
               <p className="modal__private">
                 <FiLock aria-hidden="true" />
-                Built for a client. Demo available on request.
+                Live demo coming soon.
               </p>
             )}
           </div>

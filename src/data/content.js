@@ -19,10 +19,10 @@ export const asset = (path) => `${base}${path}`;
    ========================= */
 export const profile = {
   name: "Ali Harb",
-  role: "Full-Stack Developer (MERN)",
+  role: "Full Stack Developer",
   location: "Irbid, Jordan",
   intro:
-    "Software Engineering graduate from JUST. I build web apps for real businesses, from the React interface to the API and database behind it.",
+    "Software Engineering graduate building complete web applications with the MERN and PERN stacks, from the React interface to the API and database behind it.",
   photo: asset("images/ali.jpg"),
   cv: asset("cv/Ali-Harb-CV.pdf"),
   email: "aliharb229@gmail.com",
@@ -31,7 +31,7 @@ export const profile = {
 
 export const socials = [
   { label: "GitHub", href: "https://github.com/AliFH23", icon: FaGithub },
-  { label: "LinkedIn", href: "https://www.linkedin.com/in/ali-harb-17527a294", icon: FaLinkedin },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/ali-f-harb", icon: FaLinkedin },
   { label: "Email", href: "mailto:aliharb229@gmail.com", icon: FaEnvelope },
 ];
 
@@ -95,7 +95,7 @@ export const skillGroups = [
       { name: "Git", icon: FaGitAlt, color: "#F05032", usedIn: ["mawrid", "sdk-website", "gce", "yearbook"] },
       { name: "GitHub", icon: FaGithub, color: "#E6EDF7", usedIn: ["mawrid", "sdk-website", "gce", "yearbook"] },
       { name: "VS Code", icon: VscVscode, color: "#23A9F2", usedIn: ["mawrid", "sdk-website", "gce", "yearbook"] },
-      { name: "Render", icon: SiRender, color: "#46E3B7", usedIn: ["mawrid"] },
+      { name: "Render", icon: SiRender, color: "#46E3B7", usedIn: ["mawrid", "yearbook"] },
     ],
   },
 ];
@@ -103,6 +103,7 @@ export const skillGroups = [
 /* =========================
    Projects
    fit: "cover" for screenshots, "logo" for logos
+   live: live site link, or null if not published yet
    ========================= */
 export const projects = [
   {
@@ -116,45 +117,45 @@ export const projects = [
     summary:
       "Pools purchase orders from small shops so together they reach a supplier's minimum order and unlock wholesale prices.",
     highlights: [
-      "Groups orders by product, category and region",
-      "Role-based access for Admin, Supplier and Buyer with JWT",
+      "Presented at the GCE 2026 exhibition and recognized among the top projects",
       "Layered MVC backend: routes, controllers and models",
-      "MongoDB data model with many-to-many shop categories",
+      "Role-based access for Admin, Supplier and Buyer with JWT",
+      "Groups orders by product, category and region",
     ],
     stack: ["React", "Material UI", "Node.js", "Express", "MongoDB", "JWT Auth"],
-    live: null,
-    code: "https://github.com/AliFH23/mawrid-backend",
-  },
-  {
-    id: "yearbook",
-    title: "SDK Graduate Yearbook",
-    tagline: "Yearbook website with an admin panel",
-    year: "2026",
-    role: "Built for SDK Software",
-    image: asset("images/sdk.png"),
-    fit: "logo",
-    summary:
-      "A yearbook website celebrating the company's graduates, with a protected admin panel so staff manage graduate profiles without touching code.",
-    highlights: [
-      "React frontend with graduate profiles",
-      "Node.js and Express API on MongoDB Atlas",
-      "JWT login and a protected /admin route",
-      "Add, edit and remove graduates from the browser",
-    ],
-    stack: ["React", "Vite", "Node.js", "Express", "MongoDB", "JWT Auth"],
     live: null,
     code: null,
   },
   {
-    id: "sdk-website",
-    title: "SDK Software Website",
-    tagline: "Bilingual company website",
+    id: "yearbook",
+    title: "SDK Graduate Yearbook",
+    tagline: "Yearbook web app with an admin panel",
     year: "2026",
-    role: "Built for SDK Software",
+    role: "Built for SDK Training Center",
     image: asset("images/sdk.png"),
     fit: "logo",
     summary:
-      "A company profile site presenting SDK's services, departments, accreditations and partners, in Arabic and English.",
+      "A yearbook website celebrating the center's graduates, with a protected admin panel so staff manage graduate profiles without touching code.",
+    highlights: [
+      "React frontend with graduate profiles",
+      "Node.js and Express API on MongoDB Atlas",
+      "JWT login and a protected admin dashboard",
+      "Add, edit and remove graduates from the browser",
+    ],
+    stack: ["React", "Vite", "Node.js", "Express", "MongoDB", "JWT Auth"],
+    live: "https://sdk-yearbook-1.onrender.com/",
+    code: null,
+  },
+  {
+    id: "sdk-website",
+    title: "SDK Training Center Website",
+    tagline: "Bilingual company website",
+    year: "2026",
+    role: "Built for SDK Training Center",
+    image: asset("images/sdk.png"),
+    fit: "logo",
+    summary:
+      "A company website presenting the center's services, departments, accreditations and partners, in Arabic and English.",
     highlights: [
       "Full Arabic and English support with right-to-left layout",
       "Services, departments, accreditations and partners sections",
@@ -162,18 +163,18 @@ export const projects = [
     ],
     stack: ["React", "Vite", "Material UI", "JavaScript"],
     live: "https://alifh23.github.io/Ali-SDK/",
-    code: "https://github.com/AliFH23/Ali-SDK",
+    code: null,
   },
   {
     id: "gce",
     title: "GCE 2026",
-    tagline: "Annual student exhibition website",
+    tagline: "Student exhibition website",
     year: "2026",
-    role: "Built for SDK Software",
+    role: "Built for SDK Training Center",
     image: asset("images/GCE.png"),
     fit: "logo",
     summary:
-      "The website for GCE, SDK Software's yearly exhibition where students present their projects to employers and specialists.",
+      "The official website for an annual exhibition where students present their projects to employers and specialists.",
     highlights: [
       "20 student projects grouped by theme",
       "Archive pages for the 2023 to 2025 editions",
@@ -181,7 +182,7 @@ export const projects = [
     ],
     stack: ["HTML5", "CSS3", "JavaScript"],
     live: "https://alifh23.github.io/SDK-GCE/",
-    code: "https://github.com/AliFH23/SDK-GCE",
+    code: null,
   },
 ];
 
@@ -189,13 +190,13 @@ export const projects = [
    Experience and education
    ========================= */
 export const experience = {
-  title: "Web Development Trainee",
-  company: "SDK Software",
+  title: "Web Development Intern",
+  company: "SDK Training Center",
   place: "Irbid, Jordan",
   date: "Jul 2026 – Sep 2026",
   steps: [
-    { month: "July", text: "Worked on a live company website with HTML, CSS and JavaScript." },
-    { month: "August", text: "Moved to React and built frontend features for company projects." },
+    { month: "July", text: "Worked on live company websites with HTML, CSS and JavaScript." },
+    { month: "August", text: "Moved to React and built frontend features connected to REST APIs." },
     { month: "September", text: "Built backend features with Node.js, Express and MongoDB." },
   ],
 };
@@ -212,8 +213,8 @@ export const education = {
    status: "done" or "progress"
    ========================= */
 export const training = {
-  title: "MERN Full-Stack Track",
-  provider: "SDK Software",
+  title: "MERN & PERN Full-Stack Track",
+  provider: "SDK Training Center",
   duration: "8 months",
   date: "May 2026 – Dec 2026",
   certificate: "Track certificate on completion, Dec 2026",
