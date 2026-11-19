@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import { FiX, FiCheck, FiExternalLink, FiGithub, FiLock } from "react-icons/fi";
+import { FiX, FiCheck, FiExternalLink, FiLock } from "react-icons/fi";
 import { findSkill } from "./findSkill";
 
 function ProjectModal({ project, onClose }) {
@@ -100,13 +100,8 @@ function ProjectModal({ project, onClose }) {
                 Live site
               </a>
             )}
-            {project.code && (
-              <a href={project.code} target="_blank" rel="noopener noreferrer" className="btn btn-ghost">
-                <FiGithub aria-hidden="true" />
-                Source code
-              </a>
-            )}
-            {!project.live && !project.code && (
+            
+            {!project.live && (
               <p className="modal__private">
                 <FiLock aria-hidden="true" />
                 Live demo coming soon.

@@ -1,5 +1,5 @@
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-import { FiExternalLink, FiGithub, FiMaximize2 } from "react-icons/fi";
+import { FiExternalLink, FiMaximize2 } from "react-icons/fi";
 import { findSkill } from "./findSkill";
 
 function ProjectCard({ project, index, featured, onOpen }) {
@@ -75,11 +75,7 @@ function ProjectCard({ project, index, featured, onOpen }) {
                   <FiExternalLink />
                 </a>
               )}
-              {project.code && (
-                <a href={project.code} target="_blank" rel="noopener noreferrer" aria-label={`${project.title} source code`}>
-                  <FiGithub />
-                </a>
-              )}
+              
             </div>
           </div>
 
